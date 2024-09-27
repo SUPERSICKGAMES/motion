@@ -1,0 +1,178 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue to reflect water */
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+/* Header navigation */
+header {
+    background: linear-gradient(to right, #006994, #00aaff);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+    background: url('https://example.com/swimming_pool_image.jpg') no-repeat center center/cover; /* You can replace this with a real swimming pool image */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for better readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.special {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffcc00; /* Yellow to make it stand out */
+}
+
+/* Call-to-action buttons */
+.cta {
+    background-color: #ffcc00;
+    color: #333;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #ff6600;
+}
+
+/* Content sections */
+.content-section {
+    padding: 40px 20px;
+    background-color: #e0f7fa;
+    border-bottom: 2px solid #00aaff;
+}
+
+.content-section h2 {
+    color: #006994;
+    margin-bottom: 20px;
+}
+
+.content-section p, ul {
+    margin: 20px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    font-weight: bold;
+    color: #006994;
+}
+
+/* Footer */
+footer {
+    background-color: #006994;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.8em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .special {
+        font-size: 2em;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+
+    .cta {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+/* Background Image for the Entire Page */
+body {
+    background-image: url('images/awards.jpg');  /* Replace with your image path */
+    background-size: cover;     /* Cover the entire screen */
+    background-position: center; /* Center the background */
+    background-attachment: fixed; /* Fix the background to avoid scrolling */
+    background-repeat: no-repeat; /* Prevent tiling */
+    color: white; /* Optional: Adjust text color for readability */
+}
+
+/* Alternatively, Background Image for a Specific Section */
+.content-section {
+    background-image: url('images/awards.jpg'); /* Replace with your section image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0; /* Optional: Add padding to enhance readability */
+
+
+}
+
+#lightgallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+#lightgallery a {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+#lightgallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#lightgallery a:hover img {
+    transform: scale(1.1);
+}

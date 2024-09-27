@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Swimming Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- LightGallery CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.3.0/css/lightgallery.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#swim-squad" onclick="showPage('swim-squad')">Swim Squad</a></li>
+                <li><a href="#swimming-times" onclick="showPage('swimming-times')">Swimming Times & Races</a></li>
+                <li><a href="#training-schedule" onclick="showPage('training-schedule')">Training Schedule</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="special">Dive Into My Swimming Journey</h1>
+            <a href="#swim-squad" class="cta" onclick="showPage('swim-squad')">Explore My Swim Squad</a>
+            <a href="#swimming-times" class="cta" onclick="showPage('swimming-times')">View My Swimming Times & Races</a>
+            <a href="#training-schedule" class="cta" onclick="showPage('training-schedule')">Check Out My Training Schedule</a>
+        </div>
+    </section>
+
+    <section id="photo-gallery" class="content-section">
+        <h2>Photo Gallery</h2>
+        <div id="lightgallery">
+            <a href="images/mebutflycopy.jpg">
+                <img src="images/mebutflycopy.jpg" alt="Image 1">
+            </a>
+            <a href="images/OlympicDog.jpg">
+                <img src="images/OlympicDog.jpg" alt="Image 2">
+            </a>
+            <a href="images/OlympicL.jpg">
+                <img src="images/OlympicL.jpg" alt="Image 3">
+            </a>
+            <a href="images/Phelps2008.jpg">
+                <img src="images/Phelps2008.jpg" alt="Image 4">
+            </a>
+            <a href="images/Olympicswimming.jpg">
+                <img src="images/Olympicswimming.jpg" alt="Image 5">
+            </a>
+            <a href="images/SwimmingHealth.jpg">
+                <img src="images/SwimmingHealth.jpg" alt="Image 6">
+            </a> <!-- Fixed closing tag -->
+            
+        </div>
+    </section>
+
+    <!-- LightGallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.3.0/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lg-thumbnail@2.3.0/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lg-fullscreen@2.3.0/lg-fullscreen.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            lightGallery(document.getElementById('lightgallery'), {
+                thumbnail: true, // Enables thumbnail support
+                fullScreen: true // Enables fullscreen mode
+            });
+        });
+    </script>
+
+    <!-- Swim Squad Section -->
+    <main id="swim-squad" class="content-section page">
+        <h2>Swim Squad</h2>
+        <p>
+            I’ve been swimming with my squad for the past 5 years. We are a group of competitive swimmers
+            training together for various local and national competitions. My squad consists of talented swimmers,
+            each pushing one another to excel.
+        </p>
+        <p>
+            Coach: Coach Smith, a former national champion, leads our training sessions 5 times a week, focusing on endurance,
+            technique, and mental toughness.
+        </p>
+        <p>
+            Achievements: Together, we’ve won multiple regional championships and qualified for national competitions, and we continue
+            to strive for more.
+        </p>
+    </main>
+
+    <!-- Swimming Times & Races Section -->
+    <section id="swimming-times" class="content-section page" style="display:none;">
+        <h2>Swimming Times & Races</h2>
+        <p>
+            Below are some of my personal best times and the races I’ve competed in recently:
+        </p>
+        <ul>
+            <li>50m Freestyle: 25.3 seconds</li>
+            <li>100m Freestyle: 54.6 seconds</li>
+            <li>200m Freestyle: 1:59.2 minutes</li>
+            <li>50m Butterfly: 26.1 seconds</li>
+            <li>100m Backstroke: 1:01.3 minutes</li>
+        </ul>
+        <p>Recent Competitions:</p>
+        <ul>
+            <li>National Junior Championships - 3rd place in 100m Freestyle</li>
+            <li>Regional Meet - 1st place in 200m Freestyle</li>
+            <li>Open Water 5km - Completed in 1 hour, 12 minutes</li>
+        </ul>
+    </section>
+
+    <!-- Training Schedule Section -->
+    <section id="training-schedule" class="content-section page" style="display:none;">
+        <h2>Training Schedule</h2>
+        <p>
+            My training schedule is intense, consisting of both pool and dryland workouts. Here’s a breakdown of my weekly routine:
+        </p>
+        <ul>
+            <li><strong>Monday:</strong> Endurance training - 2-hour swim session (long-distance sets)</li>
+            <li><strong>Tuesday:</strong> Sprint training - 1.5-hour swim session (focus on sprints and technique drills)</li>
+            <li><strong>Wednesday:</strong> Strength training - 1-hour gym session followed by 1-hour swim session</li>
+            <li><strong>Thursday:</strong> Recovery swim - 1-hour easy swim focusing on technique and flexibility</li>
+            <li><strong>Friday:</strong> Speed work - 2-hour session focusing on race pace and starts</li>
+            <li><strong>Saturday:</strong> Open water swim or competition prep</li>
+            <li><strong>Sunday:</strong> Rest day</li>
+        </ul>
+        <p>
+            I also incorporate stretching and mobility work daily to prevent injuries and improve flexibility.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Swimming Journey</p>
+    </footer>
+
+    <!-- Anime.js for animations -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        function animateHeader() {
+            const headerText = "My Swimming Journey";
+            const headerElement = document.querySelector(".special");
+            headerElement.textContent = ""; // Clear initial text
+
+            // Split the text into letters, wrap them in <span> elements, and append to header
+            headerText.split("").forEach((letter, index) => {
+                const span = document.createElement('span');
+                span.textContent = letter === " " ? "\u00A0" : letter; // Non-breaking space for spaces
+                span.classList.add('letter');
+                headerElement.appendChild(span);
+            });
+
+            // Cool entrance animation: fade, scale, and translateY
+            anime({
+                targets: '.special .letter',
+                opacity: [0, 1], // Fade in effect
+                scale: [0.5, 1], // Scale from small to full size
+                translateY: [-50, 0], // Move from above (-50px) to original position (0)
+                easing: 'easeOutElastic(1, .8)', // Smooth elastic effect
+                delay: anime.stagger(100), // Stagger the animation for each letter by 100ms
+                duration: 1000 // Duration of each letter's animation
+            });
+        }
+
+        // Run the header animation when the page loads
+        document.addEventListener("DOMContentLoaded", animateHeader);
+    </script>
+
+</body>
+
+</html>
